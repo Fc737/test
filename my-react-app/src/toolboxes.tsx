@@ -2,7 +2,7 @@ import ColorPalette from "./toolbox/colorpalette"
 import Pencil  from "./toolbox/pencil"
 import Eraser  from "./toolbox/eraser"
 import Trash  from "./toolbox/trash"
-import { useState} from 'react'
+import React, { useState} from 'react'
 
 export default function Toolboxes(): JSX.Element{
   const [rendering, setrendering] = useState('');
@@ -10,6 +10,7 @@ export default function Toolboxes(): JSX.Element{
   function checkButtons(whichButton: string){
     setrendering(whichButton); 
   }
+  console.log('Toolboxes rendered');
 
     return(
         <nav style={{
